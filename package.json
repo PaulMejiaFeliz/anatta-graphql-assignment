@@ -1,0 +1,16 @@
+{
+  "name": "anatta-graphql-assignment",
+  "version": "1.0.0",
+  "description": "Assigment solution for Paul Mejia",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Mejia",
+  "license": "ISC",
+  "dependencies": {
+    "@shopify/shopify-api": "^11.1.0",
+    "dotenv": "^16.4.5"
+  }
+}
