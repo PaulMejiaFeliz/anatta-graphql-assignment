@@ -7,7 +7,7 @@ import { productsQuery, variantsQuery } from './queries.js';
 
 // Init Shopify client
 const client = createGraphQLClient({
-  url: 'https://anatta-test-store.myshopify.com/admin/api/2024-07/graphql.json',
+  url: `https://${process.env.STORE_HOST}/admin/api/${process.env.API_VERSION}/graphql.json`,
   headers: {
     'Content-Type': 'application/json',
     'X-Shopify-Access-Token': process.env.ADMIN_TOKEN,
