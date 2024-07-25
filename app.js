@@ -1,13 +1,13 @@
 import { fetchProductIds, fetchVariants } from './shopifyClient.js';
 
 // Get product name from arguments
-const nameArg = process.argv.find((s) => s.startsWith('-name='));
+const nameArg = process.argv.findIndex((s) => s === '-name');
 
-if (!nameArg) {
+if (nameArg === -1 || !process.argv[nameArg + 1]) {
   throw new Error('Name argument is missing.');
 }
 
-const name = nameArg.substring(6);
+const name = process.argv[nameArg + 1];
 
 // Fetch product IDs for input name
 const productIds = await fetchProductIds(name);

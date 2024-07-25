@@ -13,7 +13,7 @@ Create a script (eg: app.js) that communicates with Shopify through Shopify’s 
 
 ### Script input
 
-`node app.js –name glove`
+`node app.js -name glove`
 
 ### Output example:
 
