@@ -2,6 +2,11 @@ import { fetchProductIds, fetchVariants } from './shopifyClient.js';
 
 // Get product name from arguments
 const nameArg = process.argv.find((s) => s.startsWith('-name='));
+
+if (!nameArg) {
+  throw new Error('Name argument is missing.');
+}
+
 const name = nameArg.substring(6);
 
 // Fetch product IDs for input name
@@ -31,5 +36,5 @@ const sortedVariants = variants.sort(
 
 // Print variants
 sortedVariants.forEach((v) => {
-  console.log(`${v.productTitle} - ${v.title} - ${v.price}`);
+  console.log(`${v.productTitle} - ${v.title} - price $${Math.round(v.price)}`);
 });
